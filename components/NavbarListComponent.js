@@ -1,19 +1,13 @@
 import pages from '../data/pagesData';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useSession } from 'next-auth/react';
-import { places } from '../data/placesData';
-import { UnorderedList, ListItem, Text, Menu, MenuButton, MenuList, MenuItem, chakra } from '@chakra-ui/react';
-import { FcHome } from "react-icons/fc";
-import { ChevronDownIcon } from '@chakra-ui/icons';
+import { UnorderedList, ListItem, Text } from '@chakra-ui/react';
 
 
-export default function NavbarListComponent({ flexDirection, backgroundColor, backgroundColorFocus }) {
+export default function NavbarListComponent({ flexDirection }) {
 
     const
-        router = useRouter(),
-        { data: session } = useSession();
-
+        router = useRouter();
 
     return (
         <UnorderedList
@@ -25,90 +19,24 @@ export default function NavbarListComponent({ flexDirection, backgroundColor, ba
             flexDirection={flexDirection}
             alignItems={'center'}
         >
-            {pages.filter((page) => page?.restricted
-                ? page.restricted(session)
-                : true)
-                .map((page) =>
-                    <ListItem key={page.name} className={router.pathname.split('/')[1] === page.src.split('/')[1]
-                        ? 'active'
-                        : ''}>
-                        {page.name === 'Главная'
-                            ? <Text
-                                href={page.src}
-                                color={'white'}
-                                textDecoration={'none'}
-                                as={Link}
-                            >
-                                <FcHome />
-                            </Text>
-                            : page.name === 'Места'
-                                ? <>
-                                    <Menu>
-                                        <MenuButton
-                                            as={Text}
-                                            fontSize="lg"
-                                            cursor="pointer"
-                                            position={'relative'}
-                                            left={flexDirection === 'column' ? '10px' : '0px'}
-                                        >
-                                            <chakra.span
-                                                className="link"
-                                                color={'white'}
-                                                ml={{ base: '5px', xl: '10px' }}
-                                            >
-                                                {page.name}<ChevronDownIcon />
-                                            </chakra.span>
-                                        </MenuButton>
+            {pages.map((page) =>
+                <ListItem key={page.name} className={router.pathname.split('/')[1] === page.src.split('/')[1]
+                    ? 'active'
+                    : ''}>
 
-                                        <MenuList
-                                            backgroundColor={backgroundColor}
-                                        >
-                                            <MenuItem
-                                                _focus={{
-                                                    backgroundColor: backgroundColorFocus
-                                                }}
-                                                backgroundColor={backgroundColor}
-                                                color={'white'}
-                                                textDecoration={'none'}
-                                                as={Link}
-                                                href={page.src}
-                                            >
-                                                Все места
-                                            </MenuItem>
+                    <Text
+                        as={Link}
+                        m={{ base: '5px', lg: '10px', xl: '30px' }}
+                        href={page.src}
+                        className="link"
+                        // color={'white'}
+                        textDecoration={'none'}
+                    >
+                        {page.name}
+                    </Text>
 
-                                            {places.map((place, i) => (
-
-                                                <MenuItem
-                                                    _focus={{
-                                                        backgroundColor: backgroundColorFocus
-                                                    }}
-                                                    backgroundColor={backgroundColor}
-                                                    color={'white'}
-                                                    textDecoration={'none'}
-                                                    key={i}
-                                                    as={Link}
-                                                    href={page.src + place.path}
-                                                >
-                                                    {place.name}
-                                                </MenuItem>
-                                            ))}
-                                        </MenuList>
-                                    </Menu>
-                                </>
-
-                                : <Text
-                                    as={Link}
-                                    m={{ base: '5px', lg: '10px', xl: '30px' }}
-                                    href={page.src}
-                                    className="link"
-                                    color={'white'}
-                                    textDecoration={'none'}
-                                >
-                                    {page.name}
-                                </Text>
-                        }
-                    </ListItem>
-                )}
+                </ListItem>
+            )}
         </UnorderedList>
     )
 }
