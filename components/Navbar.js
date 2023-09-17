@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import {
     Button, useBreakpointValue, useDisclosure,
     Drawer, DrawerBody, DrawerFooter, DrawerOverlay, DrawerContent, DrawerCloseButton,
@@ -10,7 +9,7 @@ import NavbarListComponent from '../components/NavbarListComponent';
 
 export default function Navbar() {
 
-    const isWide = useBreakpointValue({ base: false, lg: true });
+    const isWide = useBreakpointValue({ base: false, md: true });
 
     function DrawerMenu() {
         const { isOpen, onOpen, onClose } = useDisclosure()
@@ -24,6 +23,7 @@ export default function Navbar() {
                     title=''
                     backgroundColor={'#feb849'}
                     color={'white'}
+                    m={'10px'}
                     p={'10px 20px'}
                     border='none'
                     borderRadius='50px'
@@ -83,7 +83,6 @@ export default function Navbar() {
             </>
         )
     }
-
 
     return <>
         <nav>

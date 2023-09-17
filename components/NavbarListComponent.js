@@ -13,28 +13,33 @@ export default function NavbarListComponent({ flexDirection }) {
         <UnorderedList
             className="navbar"
             listStyleType={'none'}
-            ml={'0px'}
-            pl={'0px'}
+            mt={'10px'}
+            mb={'10px'}
             display={'flex'}
             flexDirection={flexDirection}
+            justifyContent={'space-evenly'}
             alignItems={'center'}
+            flexWrap={'wrap'}
         >
             {pages.map((page) =>
-                <ListItem key={page.name} className={router.pathname.split('/')[1] === page.src.split('/')[1]
-                    ? 'active'
-                    : ''}>
-
+                <ListItem
+                    key={page.name}
+                    className={router.pathname.split('/')[1] === page.src.split('/')[1]
+                        ? 'active'
+                        : ''}
+                    p={'5px'}
+                >
                     <Text
                         as={Link}
                         m={{ base: '5px', lg: '10px', xl: '30px' }}
                         href={page.src}
                         className="link"
-                        // color={'white'}
+                        color={'white'}
                         textDecoration={'none'}
+                        fontSize={'20px'}
                     >
                         {page.name}
                     </Text>
-
                 </ListItem>
             )}
         </UnorderedList>
