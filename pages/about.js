@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import { Box } from '@chakra-ui/react';
+import { marginParameters, halfMarginParameters } from '../displayParameters/marginParameters';
+import { flexDirection } from '../displayParameters/flexParameters';
 
 
 export default function AboutPage() {
@@ -8,7 +10,12 @@ export default function AboutPage() {
             <Head>
                 <title>about</title>
             </Head>
-            <Box className='about-page'>
+            <Box
+                className='about-page'
+                m={marginParameters}
+                mt={halfMarginParameters}
+                mb={halfMarginParameters}
+            >
                 about
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ante metus dictum at tempor commodo ullamcorper a. Aliquet lectus proin nibh nisl condimentum id. Diam maecenas ultricies mi eget mauris. Et netus et malesuada fames ac turpis. Duis convallis convallis tellus id interdum velit laoreet. Aliquam id diam maecenas ultricies mi. Elit ullamcorper dignissim cras tincidunt. Bibendum est ultricies integer quis auctor elit. In est ante in nibh mauris. Ante in nibh mauris cursus mattis molestie a iaculis. Lacus laoreet non curabitur gravida arcu ac. Lacus vestibulum sed arcu non odio euismod. Duis ultricies lacus sed turpis tincidunt.
 

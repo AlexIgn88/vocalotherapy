@@ -47,8 +47,10 @@ export default function Navbar() {
                 >
                     <DrawerOverlay />
                     <DrawerContent>
-                        <DrawerCloseButton />
-
+                        <DrawerCloseButton 
+                        position={'absolute'}
+                        left={'10px'}
+                        />
                         <DrawerBody
                             background={'#8d634b'}
                         >
