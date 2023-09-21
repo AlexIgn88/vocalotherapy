@@ -34,7 +34,10 @@ export default function NavbarListComponent({ flexDirection }) {
                         m={{ base: '5px', lg: '10px', xl: '30px' }}
                         href={page.src}
                         className="link"
-                        color={'white'}
+                        // color={'white'}
+                        color={'brown'}
+                        fontFamily={'cursive'}
+                        fontWeight={'bold'}
                         textDecoration={'none'}
                         fontSize={'20px'}
                     >

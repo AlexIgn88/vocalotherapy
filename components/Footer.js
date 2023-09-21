@@ -13,7 +13,7 @@ export default function Footer() {
                 zIndex: '3',
             }}
         >
-            <hr />
+            {/* <hr /> */}
             Copyright ©{new Date().getFullYear()} Все права защищены
         </footer>
     );

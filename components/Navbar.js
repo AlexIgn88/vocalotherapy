@@ -47,39 +47,18 @@ export default function Navbar() {
                 >
                     <DrawerOverlay />
                     <DrawerContent>
-                        <DrawerCloseButton 
-                        position={'absolute'}
-                        left={'10px'}
+                        <DrawerCloseButton
+                            position={'absolute'}
+                            left={'10px'}
                         />
                         <DrawerBody
-                            background={'#8d634b'}
+                            // background={'#8d634b'}
+                            background={'#f8e183'}
                         >
                             <NavbarListComponent
                                 flexDirection={'column'}
                             />
                         </DrawerBody>
-
-                        <DrawerFooter
-                            background={'#8d634b'}
-                            justifyContent={'center'}
-                        >
-                            <Button
-                                mr={3}
-                                backgroundColor={'#feb849'}
-                                color={'white'}
-                                onClick={onClose}
-                                _hover={{
-                                    backgroundColor: 'white',
-                                    color: 'black',
-                                }}
-                                _active={{
-                                    backgroundColor: 'white',
-                                    color: '#feb849',
-                                }}
-                            >
-                                Закрыть
-                            </Button>
-                        </DrawerFooter>
                     </DrawerContent>
                 </Drawer>
             </>
