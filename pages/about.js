@@ -8,7 +8,7 @@ export default function AboutPage() {
     return (
         <>
             <Head>
-                <title>about</title>
+                <title>Обо мне</title>
             </Head>
             <Box
                 className='about-page'

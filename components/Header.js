@@ -11,6 +11,7 @@ export default function Header() {
                 position: 'fixed',
                 top: '0px',
                 width: '100%',
+                zIndex: '3',
             }}
         >
             <Navbar />

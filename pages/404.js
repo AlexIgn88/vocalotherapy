@@ -1,7 +1,7 @@
 import Head from "next/head";
 // import { HeadingForPage } from '../components/ElemsForPages';
 import { Box, Heading } from "@chakra-ui/react";
-// import { marginParameters, halfMarginParameters } from '../displayParameters/marginParameters';
+import { marginParameters, halfMarginParameters } from '../displayParameters/marginParameters';
 
 export default function ErrorPage() {
     return <>
@@ -10,11 +10,11 @@ export default function ErrorPage() {
         </Head>
         <Box
             className="error-page"
-        // m={marginParameters}
-        // mt={halfMarginParameters}
-        // mb={halfMarginParameters}
+            m={marginParameters}
+            mt={halfMarginParameters}
+            mb={halfMarginParameters}
         >
-            <Heading>Страница не найдена</Heading>
+            <Heading as={'h1'} textAlign={'center'}>Страница не найдена</Heading>
             {/* <HeadingForPage element={'h1'} content={'Страница не найдена'} /> */}
         </Box>
     </>

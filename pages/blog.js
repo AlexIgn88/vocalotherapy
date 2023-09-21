@@ -6,10 +6,10 @@ export default function BlogPage() {
     return (
         <>
             <Head>
-                <title>blog</title>
+                <title>Блог</title>
             </Head>
             <Box className='blog-page'>
-                blog
+                Блог
             </Box>
         </>
     )
