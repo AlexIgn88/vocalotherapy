@@ -35,7 +35,7 @@ export default function HomePage() {
           mb={halfMarginParameters}
           fontSize={'5vmin'}
         >
-          <Box>Преподаватель по вокалу</Box>
+          <Box>Педагог по вокалу</Box>
           <Box>Виктория Андреевна Бобешко</Box>
         </Flex>
         <Flex
