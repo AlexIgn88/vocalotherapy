@@ -21,7 +21,7 @@ export default function Navbar() {
                     ref={btnRef}
                     onClick={onOpen}
                     title=''
-                    backgroundColor={'#feb849'}
+                    backgroundColor={'brown'}
                     color={'white'}
                     m={'10px'}
                     p={'10px 20px'}
@@ -52,8 +52,7 @@ export default function Navbar() {
                             left={'10px'}
                         />
                         <DrawerBody
-                            // background={'#8d634b'}
-                            background={'#f8e183'}
+                            background={'#f5e7b3'}
                         >
                             <NavbarListComponent
                                 flexDirection={'column'}

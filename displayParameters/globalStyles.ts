@@ -3,6 +3,7 @@ export const globalStyles = {
         height: '100%',
         // backgroundColor: '#f8e183',
         // background: 'linear-gradient(to right, #f8e183, white)',
+        backgroundColor: '#f5e7b3',
         fontFamily: 'sans-serif',
     },
     '#__next': {
@@ -15,9 +16,7 @@ export const globalStyles = {
         marginTop: '70px',
     },
     '.active': {
-        // 'backgroundColor': '#feb849',
-        'backgroundColor': 'rgb(252,148,79)',
-        'borderRadius': '5px',
+        borderBottom: '1px solid brown',
     },
 
     // '.main-footer ul': {

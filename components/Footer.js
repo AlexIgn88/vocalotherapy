@@ -1,11 +1,8 @@
-
-
-
 export default function Footer() {
     return (
         <footer
             style={{
-                background: 'black',
+                background: 'brown',
                 color: 'white',
                 opacity: '100%',
                 padding: '20px',
@@ -13,8 +10,7 @@ export default function Footer() {
                 zIndex: '3',
             }}
         >
-            {/* <hr /> */}
-            Copyright ©{new Date().getFullYear()} Все права защищены
+            ©{new Date().getFullYear()} Vocalotherapy | All Rights Reserved
         </footer>
     );
 };
