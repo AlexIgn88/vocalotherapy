@@ -35,6 +35,8 @@ export default function NavbarListComponent({ flexDirection }) {
                         href={page.src}
                         className="link"
                         color={'brown'}
+                        _hover={{ color: 'black' }}
+                        transition="color 0.8s ease"
                         fontFamily={'cursive'}
                         fontWeight={'bold'}
                         textDecoration={'none'}

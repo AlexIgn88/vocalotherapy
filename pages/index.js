@@ -14,8 +14,6 @@ export default function HomePage() {
       <Box
         className='home-page'
         m={marginParameters}
-        mt={halfMarginParameters}
-        mb={halfMarginParameters}
         color={'brown'}
       >
         <Flex
@@ -58,8 +56,8 @@ export default function HomePage() {
               педагог по вокалу
             </Box>
             <Box fontSize={'4vmin'} mb={'20px'}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Педагог по эстрадному вокалу со стажем 7 лет.
+              Лауреат районных, городских, Всероссийских и Международных конкурсов по эстрадному вокалу.
             </Box>
             <Box>
               Воплотите свои музыкальные мечты в реальность!
