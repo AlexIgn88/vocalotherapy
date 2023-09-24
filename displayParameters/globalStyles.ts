@@ -11,7 +11,7 @@ export const globalStyles = {
         display: 'flex',
         flexDirection: 'column',
     },
-    'main': {
+    '.main': {
         flexGrow: '1',
         marginTop: '70px',
     },

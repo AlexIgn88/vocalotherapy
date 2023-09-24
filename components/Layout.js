@@ -7,13 +7,12 @@ export default function Layout({ children }) {
 
     return <>
         <Header />
-        <main>
-            <Box
-                fontSize={textFontSize}
-            >
-                {children}
-            </Box>
-        </main>
+        <Box
+            className='main'
+            fontSize={textFontSize}
+        >
+            {children}
+        </Box>
         <Footer />
     </>
 };
