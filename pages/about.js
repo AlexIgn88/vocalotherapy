@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import background from '../public/img/imgAbout.jpg';
 import {
-    Box, Flex, Text,
+    Box, Flex, Text, Heading, useBreakpointValue,
     List, ListItem, ListIcon, OrderedList, UnorderedList,
 } from '@chakra-ui/react';
 import { marginParameters, halfMarginParameters } from '../displayParameters/marginParameters';
@@ -11,6 +11,9 @@ import { marginParameters, halfMarginParameters } from '../displayParameters/mar
 
 
 export default function AboutPage() {
+
+    const isWide = useBreakpointValue({ base: false, md: true });
+
     return (
         <>
             <Head>
@@ -22,17 +25,27 @@ export default function AboutPage() {
                 mt={halfMarginParameters}
                 mb={halfMarginParameters}
             >
+                <Heading
+                    as={'h1'}
+                    mb={'30px'}
+                    textAlign={'center'}
+                    fontWeight={'normal'}
+                    color={'brown'}
+                    fontFamily={'cursive'}
+                >
+                    Обо мне
+                </Heading>
                 <Box
                 // gap={'50px'}
                 // flexDirection={{ base: 'column-reverse', lg: 'row' }}
                 // alignItems={{ base: 'center', lg: 'flex-start' }}
                 >
                     <Box
-                        w={'50%'}
-                        h={'50%'}
+                        w={{ base: '100%', md: '50%' }}
+                        h={{ base: '100%', md: '50%' }}
                         m={'30px'}
                         mt={'0px'}
-                        style={{ float: 'right', }}
+                        style={{ float: isWide ? 'right' : 'none', }}
                     >
                         <Image
                             src={background}
