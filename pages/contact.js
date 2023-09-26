@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import { Box, Flex, Button } from '@chakra-ui/react';
+import Image from 'next/image';
+import background from '../public/img/contact.jpg';
+import { Box, Flex } from '@chakra-ui/react';
 import { marginParameters, halfMarginParameters } from '../displayParameters/marginParameters';
-// import { flexDirection } from '../displayParameters/flexParameters';
-// import { h1HeadersFontSize } from '../displayParameters/fontParameters';
 import { SocialIcon } from 'react-social-icons';
 
 
@@ -14,23 +14,27 @@ export default function ContactPage() {
             </Head>
             <Flex
                 className='contact-page'
+                flexDirection={{ base: 'column-reverse', lg: 'row' }}
+                gap={{ base: '30px', lg: '50px' }}
                 h={'100%'}
                 m={marginParameters}
-                mt={halfMarginParameters}
+                mt={marginParameters}
                 mb={halfMarginParameters}
                 alignItems={'center'}
                 justifyContent={'center'}
+                position={'relative'}
+                bottom={'100px'}
             >
                 <Flex
                     flexDirection={'column'}
-                    gap={'50px'}
-                    position={'relative'}
-                    bottom={'100px'}
+                gap={'50px'}
+                alignItems={{ base: 'center', lg: 'normal' }}
                 >
                     <Box
                         color={'brown'}
                         fontWeight={'bold'}
                         fontSize={'4vmin'}
+                        textAlign={{ base: 'center', lg: 'left' }}
                     >
                         Запишитесь на занятия по вокалу уже сегодня!
                     </Box>
@@ -41,16 +45,26 @@ export default function ContactPage() {
                         <Box textDecoration={'underline'}>
                             <a href={'mailto:' + 'bobeshko131192@mail.ru'}>bobeshko131192@mail.ru</a>
                         </Box>
-                        <Box>
-                            {/* <Button>инстаграмм</Button> */}
-                            {/* <Button colorScheme='whatsapp'>Vocalotherapy</Button> */}
+                        <Flex gap={'20px'} justifyContent={{ base: 'center', lg: 'normal' }}>
                             <SocialIcon url="https://instagram.com/vocalotherapy?igshid=MmU2YjMzNjRlOQ==" />
-                            <SocialIcon url="https://t.me/loveliverose" />
-                            <SocialIcon url="https://web.telegram.org/a/" />
-                            <Button colorScheme='telegram'>Telegram</Button>
-                        </Box>
+                            <SocialIcon url="https://telegram.me/loveliverose" />
+                        </Flex>
                     </Flex>
                 </Flex>
+                <Image
+                    src={background}
+                    alt='Vocalotherapy'
+                    placeholder="blur"
+                    height={200}
+                    width={300}
+                    priority={true}
+                    style={{
+                        borderRadius: '20px',
+                        width: '400px',
+                        objectFit: 'cover',
+                        objectPosition: 'center',
+                    }}
+                />
             </Flex>
         </>
     )
