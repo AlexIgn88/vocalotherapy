@@ -18,6 +18,9 @@ export const globalStyles = {
     '.active': {
         borderBottom: '1px solid brown',
     },
+    '.about-list li': {
+        marginBottom: '10px',
+    },
 
     // '.main-footer ul': {
     //     listStyleType: 'none',

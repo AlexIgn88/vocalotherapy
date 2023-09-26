@@ -6,6 +6,7 @@ export default function Header() {
     return <>
         <header
             style={{
+                backgroundColor: '#f5e7b3',
                 opacity: '100%',
                 position: 'fixed',
                 top: '0px',

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import background from '../public/img/imgAbout.jpg';
 import {
-    Box, Flex,
+    Box, Flex, Text,
     List, ListItem, ListIcon, OrderedList, UnorderedList,
 } from '@chakra-ui/react';
 import { marginParameters, halfMarginParameters } from '../displayParameters/marginParameters';
@@ -22,15 +22,36 @@ export default function AboutPage() {
                 mt={halfMarginParameters}
                 mb={halfMarginParameters}
             >
-                <Flex
-                    gap={'50px'}
-                    flexDirection={{ base: 'column-reverse', lg: 'row' }}
-                    alignItems={{ base: 'center', lg: 'flex-start' }}
+                <Box
+                // gap={'50px'}
+                // flexDirection={{ base: 'column-reverse', lg: 'row' }}
+                // alignItems={{ base: 'center', lg: 'flex-start' }}
                 >
-                    <UnorderedList
-                        // w={'50%'}
-                        w={{ base: '100%', lg: '50%' }}
+                    <Box
+                        w={'50%'}
+                        h={'50%'}
+                        m={'30px'}
+                        mt={'0px'}
+                        style={{ float: 'right', }}
                     >
+                        <Image
+                            src={background}
+                            alt='Vocalotherapy'
+                            placeholder="blur"
+                            height={200}
+                            width={300}
+                            priority={true}
+                            style={{
+                                borderRadius: '5px',
+                                width: '90%',
+                                height: '90%',
+                                objectFit: 'cover',
+                                objectPosition: 'center',
+                            }}
+                        />
+                    </Box>
+
+                    <UnorderedList className='about-list'>
                         <ListItem>Член Федерации педагогов вокального искусства РФ,
                             обладатель судейской категории III степени
                         </ListItem>
@@ -53,31 +74,12 @@ export default function AboutPage() {
                         </ListItem>
                         <ListItem>Мастерство и успехи в образовательной и творческой деятельности были отмечены благодарственными
                             письмами Воронежской Городской Думы.
-                        </ListItem>.
+                        </ListItem>
                     </UnorderedList>
-                    {/* <Box
-                        // p={'50px'}
-                        w={'50%'}
-                    > */}
-                    <Image
-                        src={background}
-                        alt='Vocalotherapy'
-                        placeholder="blur"
-                        height={200}
-                        width={300}
-                        priority={true}
-                        style={{
-                            // padding: '50px',
-                            borderRadius: '5px',
-                            // width: '400px',
-                            width: '50%',
-                            height: '50%',
-                            objectFit: 'cover',
-                            objectPosition: 'center',
-                        }}
-                    />
-                    {/* </Box> */}
-                </Flex>
+
+
+
+                </Box>
             </Box>
         </>
     )
