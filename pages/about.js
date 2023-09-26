@@ -8,6 +8,7 @@ import {
 import { marginParameters, halfMarginParameters } from '../displayParameters/marginParameters';
 // import { flexDirection } from '../displayParameters/flexParameters';
 // import { h1HeadersFontSize } from '../displayParameters/fontParameters';
+import { PiMusicNotesFill } from 'react-icons/pi';
 
 
 export default function AboutPage() {
@@ -23,7 +24,7 @@ export default function AboutPage() {
                 className='about-page'
                 m={marginParameters}
                 mt={halfMarginParameters}
-                mb={halfMarginParameters}
+                // mb={halfMarginParameters}
             >
                 <Heading
                     as={'h1'}
@@ -55,7 +56,7 @@ export default function AboutPage() {
                             width={300}
                             priority={true}
                             style={{
-                                borderRadius: '5px',
+                                borderRadius: '10px',
                                 width: '90%',
                                 height: '90%',
                                 objectFit: 'cover',
@@ -64,31 +65,47 @@ export default function AboutPage() {
                         />
                     </Box>
 
-                    <UnorderedList className='about-list'>
-                        <ListItem>Член Федерации педагогов вокального искусства РФ,
+                    <List className='about-list'>
+                        <ListItem>
+                            <ListIcon as={PiMusicNotesFill} color='brown' />
+                            Член Федерации педагогов вокального искусства РФ,
                             обладатель судейской категории III степени
                         </ListItem>
-                        <ListItem>Педагог дополнительного образования в сфере эстрадного вокала со стажем 7 лет.
+                        <ListItem>
+                            <ListIcon as={PiMusicNotesFill} color='brown' />
+                            Педагог дополнительного образования в сфере эстрадного вокала со стажем 7 лет.
                         </ListItem>
-                        <ListItem>В 2015 году с отличием окончила факультет искусств и художественного образования
+                        <ListItem>
+                            <ListIcon as={PiMusicNotesFill} color='brown' />
+                            В 2015 году с отличием окончила факультет искусств и художественного образования
                             Воронежского государственного педагогического университета. Профиль &quot;Музыка&quot;
                         </ListItem>
-                        <ListItem>В 2019 года прошла курсы повышения квалификации в ГБУ ВО &quot;Областной центр
+                        <ListItem>
+                            <ListIcon as={PiMusicNotesFill} color='brown' />
+                            В 2019 года прошла курсы повышения квалификации в ГБУ ВО &quot;Областной центр
                             развития дополнительного образования, гражданского и патриотического воспитания детей и молодёжи&quot;
                             по программе &quot;Вокальное искусство&quot;.
                         </ListItem>
-                        <ListItem>Лауреат районных, городских, Всероссийских и Международных конкурсов (эстрадный вокал).
+                        <ListItem>
+                            <ListIcon as={PiMusicNotesFill} color='brown' />
+                            Лауреат районных, городских, Всероссийских и Международных конкурсов (эстрадный вокал).
                         </ListItem>
-                        <ListItem>Участница II Международной научно-практической конференции &quot;Современное художественное образование:
+                        <ListItem>
+                            <ListIcon as={PiMusicNotesFill} color='brown' />
+                            Участница II Международной научно-практической конференции &quot;Современное художественное образование:
                             теория и практика&quot; (г. Воронеж).
                         </ListItem>
-                        <ListItem>Ученики - лауреаты и дипломанты районных, городских, региональных, Всероссийских, Международных
+                        <ListItem>
+                            <ListIcon as={PiMusicNotesFill} color='brown' />
+                            Ученики - лауреаты и дипломанты районных, городских, региональных, Всероссийских, Международных
                             вокальных конкурсов, а также участники городских мероприятий.
                         </ListItem>
-                        <ListItem>Мастерство и успехи в образовательной и творческой деятельности были отмечены благодарственными
+                        <ListItem>
+                            <ListIcon as={PiMusicNotesFill} color='brown' />
+                            Мастерство и успехи в образовательной и творческой деятельности были отмечены благодарственными
                             письмами Воронежской Городской Думы.
                         </ListItem>
-                    </UnorderedList>
+                    </List>
 
 
 

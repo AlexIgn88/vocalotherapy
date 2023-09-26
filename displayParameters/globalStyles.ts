@@ -19,7 +19,7 @@ export const globalStyles = {
         borderBottom: '1px solid brown',
     },
     '.about-list li': {
-        marginBottom: '10px',
+        marginBottom: '20px',
     },
 
     // '.main-footer ul': {

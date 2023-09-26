@@ -15,8 +15,8 @@ export default function ContactPage() {
             <Box
                 className='contact-page'
                 m={marginParameters}
-                mt={marginParameters}
-                mb={halfMarginParameters}
+                mt={halfMarginParameters}
+                // mb={halfMarginParameters}
             >
                 <Heading
                     as={'h1'}
