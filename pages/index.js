@@ -25,8 +25,8 @@ export default function HomePage() {
             src={background}
             alt='Vocalotherapy'
             placeholder="blur"
-            height={200}
-            width={300}
+            height={'400px'}
+            width={'400px'}
             priority={true}
             style={{
               borderRadius: '50%',
