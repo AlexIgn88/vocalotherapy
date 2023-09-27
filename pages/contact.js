@@ -2,19 +2,15 @@ import Head from 'next/head';
 import Image from 'next/image';
 import background from '../public/img/contact.jpg';
 import { Box, Flex, Heading } from '@chakra-ui/react';
-import { marginParameters, marginParametersInArray, halfMarginParameters } from '../displayParameters/marginParameters';
+import { marginParametersInArray, halfMarginParameters } from '../displayParameters/marginParameters';
 import { SocialIcon } from 'react-social-icons';
 import { h1HeadersFontSize, h2HeadersFontSize } from '../displayParameters/fontParameters';
 
 
 export default function ContactPage() {
 
-    console.log('marginParametersInArray=', marginParametersInArray);
-
     const newMarginParametersInArray = marginParametersInArray
         .map(item => parseInt(item).toString() * 2 + 'px');
-
-    console.log('newMarginParametersInArray=', newMarginParametersInArray);
 
     return (
         <>
@@ -23,10 +19,8 @@ export default function ContactPage() {
             </Head>
             <Box
                 className='contact-page'
-                // m={halfMarginParameters}
-
                 mt={halfMarginParameters}
-                mb={halfMarginParameters}
+                mb={marginParametersInArray}
                 ml={newMarginParametersInArray}
                 mr={newMarginParametersInArray}
             >
@@ -55,7 +49,6 @@ export default function ContactPage() {
                         <Box
                             color={'brown'}
                             fontWeight={'bold'}
-                            // fontSize={'4vmin'}
                             fontSize={h1HeadersFontSize}
                             textAlign={{ base: 'center', lg: 'left' }}
                         >
