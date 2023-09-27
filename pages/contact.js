@@ -2,11 +2,20 @@ import Head from 'next/head';
 import Image from 'next/image';
 import background from '../public/img/contact.jpg';
 import { Box, Flex, Heading } from '@chakra-ui/react';
-import { marginParameters, halfMarginParameters } from '../displayParameters/marginParameters';
+import { marginParameters, marginParametersInArray, halfMarginParameters } from '../displayParameters/marginParameters';
 import { SocialIcon } from 'react-social-icons';
+import { h1HeadersFontSize, h2HeadersFontSize } from '../displayParameters/fontParameters';
 
 
 export default function ContactPage() {
+
+    console.log('marginParametersInArray=', marginParametersInArray);
+
+    const newMarginParametersInArray = marginParametersInArray
+        .map(item => parseInt(item).toString() * 2 + 'px');
+
+    console.log('newMarginParametersInArray=', newMarginParametersInArray);
+
     return (
         <>
             <Head>
@@ -14,9 +23,12 @@ export default function ContactPage() {
             </Head>
             <Box
                 className='contact-page'
-                m={marginParameters}
+                // m={halfMarginParameters}
+
                 mt={halfMarginParameters}
-                // mb={halfMarginParameters}
+                mb={halfMarginParameters}
+                ml={newMarginParametersInArray}
+                mr={newMarginParametersInArray}
             >
                 <Heading
                     as={'h1'}
@@ -43,7 +55,8 @@ export default function ContactPage() {
                         <Box
                             color={'brown'}
                             fontWeight={'bold'}
-                            fontSize={'4vmin'}
+                            // fontSize={'4vmin'}
+                            fontSize={h1HeadersFontSize}
                             textAlign={{ base: 'center', lg: 'left' }}
                         >
                             Запишитесь на занятия по вокалу уже сегодня!
@@ -52,7 +65,11 @@ export default function ContactPage() {
                             flexDirection={'column'}
                             gap={'50px'}
                         >
-                            <Box textDecoration={'underline'}>
+                            <Box
+                                textDecoration={'underline'}
+                                fontSize={h2HeadersFontSize}
+                                color={'brown'}
+                            >
                                 <a href={'mailto:' + 'bobeshko131192@mail.ru'}>bobeshko131192@mail.ru</a>
                             </Box>
                             <Flex gap={'20px'} justifyContent={{ base: 'center', lg: 'normal' }}>
