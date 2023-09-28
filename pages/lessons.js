@@ -85,7 +85,7 @@ export default function LessonsPage() {
                             fontFamily={'cursive'}
                             fontSize={h2HeadersFontSize}
                         >
-                            Преимущества моего курса Vocalotherapy:
+                            Преимущества моего курса Vocalotherapy
                         </Heading>
                         <List textAlign={'justify'}>
                             <ListItem>
