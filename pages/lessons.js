@@ -1,7 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import background from '../public/img/contact.jpg';
-import { Box, Flex, Heading, useBreakpointValue, Text } from '@chakra-ui/react';
+import {
+    Box, Flex, Heading, useBreakpointValue, Text,
+    List, ListItem, ListIcon
+} from '@chakra-ui/react';
+import { PiMusicNotesFill } from 'react-icons/pi';
 import { marginParameters, halfMarginParameters } from '../displayParameters/marginParameters';
 // import { flexDirection } from '../displayParameters/flexParameters';
 // import { h1HeadersFontSize, h2HeadersFontSize } from '../displayParameters/fontParameters';
@@ -29,20 +33,32 @@ export default function LessonsPage() {
                     color={'brown'}
                     fontFamily={'cursive'}
                 >
-                    Уроки вокала
+                    Vocalotherapy: откройте для себя Силу Голоса!
                 </Heading>
                 <Box
                 // flexDirection={{ base: 'column', md: 'row' }}
                 // gap={{ base: '30px', lg: '50px' }}
                 >
+                    <Text textIndent={'30px'}>
+                        Вы мечтаете научиться петь, развить свой голос и улучшить свои вокальные способности?
+                        Тогда мой курс Vocalotherapy - это то, что вам нужно!
+                    </Text>
+
+                    <Text>
+                        На моем курсе вы сможете раскрыть свой потенциал и освоить вокальное мастерство
+                        под руководством опытного педагога. Я предлагаю уникальную методику обучения,
+                        которая сочетает в себе традиционные и современные подходы к обучению вокалу.
+                    </Text>
                     <Box
                         // w={{ base: '100%', lg: '50%' }}
 
-                        w={{ base: '100%', lg: '50%' }}
-                        h={{ base: '100%', lg: '50%' }}
+                        w={{ base: '100%', lg: '30%' }}
+                        h={{ base: '100%', lg: '30%' }}
                         // m={'30px'}
                         m={{ base: '0', lg: '30px' }}
-                        mt={{ base: '0', lg: '0' }}
+                        // mt={{ base: '0', lg: '0' }}
+                        ml={{ base: '0', lg: '0' }}
+                        mt={'30px'}
                         mb={'30px'}
                         style={{
                             float: isWide ? 'left' : 'none',
@@ -52,7 +68,7 @@ export default function LessonsPage() {
                     >
                         <Image
 
-                        //временный бэкграунд. Найти картинку
+                            //временный бэкграунд. Найти картинку
                             src={background}
 
                             alt='Vocalotherapy'
@@ -72,11 +88,48 @@ export default function LessonsPage() {
                     <Box
                     // w={{ base: '100%', lg: '50%' }}
                     >
-                        <Text
-                            textAlign={'justify'}
+                        <Heading
+                            as={'h2'}
+                            mt={'25px'}
+                            mb={'30px'}
+                            textAlign={'center'}
+                            fontWeight={'normal'}
+                            color={'brown'}
+                        // fontFamily={'cursive'}
                         >
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Volutpat maecenas volutpat blandit aliquam etiam. Ut porttitor leo a diam sollicitudin tempor id eu nisl. Mollis nunc sed id semper risus in. Ullamcorper sit amet risus nullam eget felis eget nunc. Rhoncus mattis rhoncus urna neque viverra justo nec. Dui faucibus in ornare quam viverra orci sagittis. Amet commodo nulla facilisi nullam vehicula ipsum a arcu. Risus nec feugiat in fermentum posuere urna nec. Lorem sed risus ultricies tristique nulla aliquet enim. Pharetra magna ac placerat vestibulum lectus mauris ultrices eros in.
-                        </Text>
+                            Преимущества моего курса Vocalotherapy:
+                        </Heading>
+                        <List textAlign={'justify'}>
+                            <ListItem>
+                                <ListIcon as={PiMusicNotesFill} color='brown' />
+                                Индивидуальный подход: я учитываю ваши музыкальные предпочтения,
+                                чтобы помочь вам достичь вашей цели.
+                            </ListItem>
+
+                            <ListItem>
+                                <ListIcon as={PiMusicNotesFill} color='brown' />
+                                Разнообразие методик: благодаря сочетанию различных техник, вы получите
+                                более глубокое понимание основ вокала и сможете подобрать наиболее подходящую для вас методику.
+                            </ListItem>
+
+                            <ListItem>
+                                <ListIcon as={PiMusicNotesFill} color='brown' />
+                                Развитие музыкального слуха: вы научитесь различать различные тона, аккорды и мелодии,
+                                что поможет вам лучше понимать и воспроизводить музыку.
+                            </ListItem>
+
+                            <ListItem>
+                                <ListIcon as={PiMusicNotesFill} color='brown' />
+                                Улучшение дыхания и голоса: вы освоите техники правильного дыхания и научитесь контролировать
+                                свой голос, что позволит вам петь долго и без усталости.
+                            </ListItem>
+
+                            <ListItem>
+                                <ListIcon as={PiMusicNotesFill} color='brown' />
+                                Снятие голосовых зажимов: на моем курсе вы избавитесь от голосовых блоков и зажимов,
+                                которые мешают вам свободно и уверенно петь.
+                            </ListItem>
+                        </List>
                     </Box>
                 </Box>
             </Box>
