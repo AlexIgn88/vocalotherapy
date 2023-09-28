@@ -1,14 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import background from '../public/img/contact.jpg';
+import background from '../public/img/lessons.jpeg';
 import {
-    Box, Flex, Heading, useBreakpointValue, Text,
+    Box, Heading, useBreakpointValue, Text,
     List, ListItem, ListIcon
 } from '@chakra-ui/react';
 import { PiMusicNotesFill } from 'react-icons/pi';
 import { marginParameters, halfMarginParameters } from '../displayParameters/marginParameters';
-// import { flexDirection } from '../displayParameters/flexParameters';
-// import { h1HeadersFontSize, h2HeadersFontSize } from '../displayParameters/fontParameters';
+import { h1HeadersFontSize, h2HeadersFontSize } from '../displayParameters/fontParameters';
 
 
 export default function LessonsPage() {
@@ -32,13 +31,11 @@ export default function LessonsPage() {
                     fontWeight={'normal'}
                     color={'brown'}
                     fontFamily={'cursive'}
+                    fontSize={h1HeadersFontSize}
                 >
                     Vocalotherapy: откройте для себя Силу Голоса!
                 </Heading>
-                <Box
-                // flexDirection={{ base: 'column', md: 'row' }}
-                // gap={{ base: '30px', lg: '50px' }}
-                >
+                <Box>
                     <Text textIndent={'30px'}>
                         Вы мечтаете научиться петь, развить свой голос и улучшить свои вокальные способности?
                         Тогда мой курс Vocalotherapy - это то, что вам нужно!
@@ -50,13 +47,9 @@ export default function LessonsPage() {
                         которая сочетает в себе традиционные и современные подходы к обучению вокалу.
                     </Text>
                     <Box
-                        // w={{ base: '100%', lg: '50%' }}
-
                         w={{ base: '100%', lg: '30%' }}
                         h={{ base: '100%', lg: '30%' }}
-                        // m={'30px'}
                         m={{ base: '0', lg: '30px' }}
-                        // mt={{ base: '0', lg: '0' }}
                         ml={{ base: '0', lg: '0' }}
                         mt={'30px'}
                         mb={'30px'}
@@ -67,10 +60,7 @@ export default function LessonsPage() {
                         }}
                     >
                         <Image
-
-                            //временный бэкграунд. Найти картинку
                             src={background}
-
                             alt='Vocalotherapy'
                             placeholder="blur"
                             height={200}
@@ -78,16 +68,13 @@ export default function LessonsPage() {
                             priority={true}
                             style={{
                                 borderRadius: '20px',
-                                // width: '100%',
                                 width: isWide ? '100%' : '50%',
                                 objectFit: 'cover',
                                 objectPosition: 'center',
                             }}
                         />
                     </Box>
-                    <Box
-                    // w={{ base: '100%', lg: '50%' }}
-                    >
+                    <Box>
                         <Heading
                             as={'h2'}
                             mt={'25px'}
@@ -95,7 +82,8 @@ export default function LessonsPage() {
                             textAlign={'center'}
                             fontWeight={'normal'}
                             color={'brown'}
-                        // fontFamily={'cursive'}
+                            fontFamily={'cursive'}
+                            fontSize={h2HeadersFontSize}
                         >
                             Преимущества моего курса Vocalotherapy:
                         </Heading>
@@ -105,25 +93,21 @@ export default function LessonsPage() {
                                 Индивидуальный подход: я учитываю ваши музыкальные предпочтения,
                                 чтобы помочь вам достичь вашей цели.
                             </ListItem>
-
                             <ListItem>
                                 <ListIcon as={PiMusicNotesFill} color='brown' />
                                 Разнообразие методик: благодаря сочетанию различных техник, вы получите
                                 более глубокое понимание основ вокала и сможете подобрать наиболее подходящую для вас методику.
                             </ListItem>
-
                             <ListItem>
                                 <ListIcon as={PiMusicNotesFill} color='brown' />
                                 Развитие музыкального слуха: вы научитесь различать различные тона, аккорды и мелодии,
                                 что поможет вам лучше понимать и воспроизводить музыку.
                             </ListItem>
-
                             <ListItem>
                                 <ListIcon as={PiMusicNotesFill} color='brown' />
                                 Улучшение дыхания и голоса: вы освоите техники правильного дыхания и научитесь контролировать
                                 свой голос, что позволит вам петь долго и без усталости.
                             </ListItem>
-
                             <ListItem>
                                 <ListIcon as={PiMusicNotesFill} color='brown' />
                                 Снятие голосовых зажимов: на моем курсе вы избавитесь от голосовых блоков и зажимов,
