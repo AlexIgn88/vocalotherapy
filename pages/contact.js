@@ -31,6 +31,7 @@ export default function ContactPage() {
                     fontWeight={'normal'}
                     color={'brown'}
                     fontFamily={'cursive'}
+                    fontSize={h1HeadersFontSize}
                 >
                     Контакты
                 </Heading>
@@ -49,7 +50,7 @@ export default function ContactPage() {
                         <Box
                             color={'brown'}
                             fontWeight={'bold'}
-                            fontSize={h1HeadersFontSize}
+                            fontSize={h2HeadersFontSize}
                             textAlign={{ base: 'center', lg: 'left' }}
                         >
                             Запишитесь на занятия по вокалу уже сегодня!

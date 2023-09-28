@@ -2,12 +2,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 import background from '../public/img/imgAbout.jpg';
 import {
-    Box, Flex, Text, Heading, useBreakpointValue,
-    List, ListItem, ListIcon, OrderedList, UnorderedList,
+    Box, Heading, useBreakpointValue,
+    List, ListItem, ListIcon,
 } from '@chakra-ui/react';
 import { marginParameters, halfMarginParameters } from '../displayParameters/marginParameters';
-// import { flexDirection } from '../displayParameters/flexParameters';
-// import { h1HeadersFontSize } from '../displayParameters/fontParameters';
+import { h1HeadersFontSize } from '../displayParameters/fontParameters';
 import { PiMusicNotesFill } from 'react-icons/pi';
 
 
@@ -24,7 +23,6 @@ export default function AboutPage() {
                 className='about-page'
                 m={marginParameters}
                 mt={halfMarginParameters}
-                // mb={halfMarginParameters}
             >
                 <Heading
                     as={'h1'}
@@ -33,14 +31,11 @@ export default function AboutPage() {
                     fontWeight={'normal'}
                     color={'brown'}
                     fontFamily={'cursive'}
+                    fontSize={h1HeadersFontSize}
                 >
                     Обо мне
                 </Heading>
-                <Box
-                // gap={'50px'}
-                // flexDirection={{ base: 'column-reverse', lg: 'row' }}
-                // alignItems={{ base: 'center', lg: 'flex-start' }}
-                >
+                <Box>
                     <Box
                         w={{ base: '100%', md: '50%' }}
                         h={{ base: '100%', md: '50%' }}
@@ -57,8 +52,8 @@ export default function AboutPage() {
                             priority={true}
                             style={{
                                 borderRadius: '10px',
-                                width: '90%',
-                                height: '90%',
+                                width: '100%',
+                                height: '100%',
                                 objectFit: 'cover',
                                 objectPosition: 'center',
                             }}
@@ -106,9 +101,6 @@ export default function AboutPage() {
                             письмами Воронежской Городской Думы.
                         </ListItem>
                     </List>
-
-
-
                 </Box>
             </Box>
         </>

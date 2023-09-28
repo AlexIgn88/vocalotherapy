@@ -19,7 +19,6 @@ export const globalStyles = {
         borderBottom: '1px solid brown',
     },
     '.about-list li': {
-        // marginBottom: '20px',
         marginBottom: '2vh',
     },
 
