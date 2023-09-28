@@ -39,8 +39,10 @@ export default function AboutPage() {
                     <Box
                         w={{ base: '100%', md: '50%' }}
                         h={{ base: '100%', md: '50%' }}
-                        m={'30px'}
                         mt={'0px'}
+                        mb={'30px'}
+                        ml={{ base: '0', md: '30px' }}
+                        mr={{ base: '30px', md: '0' }}
                         style={{ float: isWide ? 'right' : 'none', }}
                     >
                         <Image
