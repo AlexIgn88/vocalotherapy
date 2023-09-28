@@ -76,8 +76,8 @@ export default function ContactPage() {
                         src={background}
                         alt='Vocalotherapy'
                         placeholder="blur"
-                        height={200}
-                        width={300}
+                        height={300}
+                        width={400}
                         priority={true}
                         style={{
                             borderRadius: '20px',
