@@ -33,7 +33,7 @@ export default function LessonsPage() {
                     fontFamily={'cursive'}
                     fontSize={h1HeadersFontSize}
                 >
-                    Vocalotherapy: откройте для себя Силу Голоса!
+                    Vocalotherapy: откройте для себя Силу Голоса
                 </Heading>
                 <Box>
                     <Text textIndent={'30px'}>
