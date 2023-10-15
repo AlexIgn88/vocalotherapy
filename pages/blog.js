@@ -4,7 +4,8 @@ import {
 } from '@chakra-ui/react';
 import { marginParameters, halfMarginParameters } from '../displayParameters/marginParameters';
 // import { h1HeadersFontSize, h2HeadersFontSize } from '../displayParameters/fontParameters';
-import BlogArticleComponent from '../components/BlogArticleComponent';
+import BlogCardComponent from '../components/BlogCardComponent';
+import blogArticleData from '../data/blogArticleData';
 
 
 export default function BlogPage() {
@@ -43,12 +44,14 @@ export default function BlogPage() {
                     gap={'5vw'}
                 >
 
-                    <BlogArticleComponent />
-                    <BlogArticleComponent />
-                    <BlogArticleComponent />
-                    <BlogArticleComponent />
-                    <BlogArticleComponent />
-                    <BlogArticleComponent />
+                    {blogArticleData.map((item, i) =>
+                        <BlogCardComponent
+                            key={blogArticleData[i].id}
+                            heading={blogArticleData[i].heading}
+                            img={blogArticleData[i].image}
+                            description={blogArticleData[i].description}
+                        />
+                    )}
 
                 </Grid>
             </Box>
