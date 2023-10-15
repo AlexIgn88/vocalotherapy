@@ -1,6 +1,6 @@
 import {
-    Box, Flex, Heading, Stack, Divider, Text,
-    Card, CardHeader, CardBody, CardFooter,
+    Heading, Stack, Text,
+    Card, CardBody,
 } from '@chakra-ui/react';
 import Image from 'next/image';
 
@@ -10,6 +10,7 @@ export default function BlogCardComponent({ heading, img, description }) {
 
     return <Card maxW='sm'>
         <CardBody
+            p={'30px'}
             display={'flex'}
             flexDirection={'column'}
             alignItems={'center'}
@@ -17,13 +18,12 @@ export default function BlogCardComponent({ heading, img, description }) {
             <Image
                 src={img}
                 alt={heading}
-                // placeholder="blur"
                 height={200}
                 width={300}
                 priority={true}
                 style={{
                     borderRadius: '10px',
-                    width: '300px',
+                    width: '100%',
                     objectFit: 'cover',
                     objectPosition: 'center',
                 }}

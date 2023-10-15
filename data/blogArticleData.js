@@ -21,27 +21,27 @@ const blogArticleData = [
         image: '/img/blogArticleImg.jpeg',
         text: `null-3`,
     },
-    {
-        id: 4,
-        heading: 'Заголовок четвертый',
-        description: 'Четвертая статья блога о чем-то интересном и музыкальном',
-        image: '/img/blogArticleImg.jpeg',
-        text: `null-4`,
-    },
-    {
-        id: 5,
-        heading: 'Заголовок пятый',
-        description: 'Пятая статья блога о чем-то интересном и музыкальном',
-        image: '/img/blogArticleImg.jpeg',
-        text: `null-5`,
-    },
-    {
-        id: 6,
-        heading: 'Заголовок шестой',
-        description: 'Шестая статья блога о чем-то интересном и музыкальном',
-        image: '/img/blogArticleImg.jpeg',
-        text: `null-6`,
-    },
+    // {
+    //     id: 4,
+    //     heading: 'Заголовок четвертый',
+    //     description: 'Четвертая статья блога о чем-то интересном и музыкальном',
+    //     image: '/img/blogArticleImg.jpeg',
+    //     text: `null-4`,
+    // },
+    // {
+    //     id: 5,
+    //     heading: 'Заголовок пятый',
+    //     description: 'Пятая статья блога о чем-то интересном и музыкальном',
+    //     image: '/img/blogArticleImg.jpeg',
+    //     text: `null-5`,
+    // },
+    // {
+    //     id: 6,
+    //     heading: 'Заголовок шестой',
+    //     description: 'Шестая статья блога о чем-то интересном и музыкальном',
+    //     image: '/img/blogArticleImg.jpeg',
+    //     text: `null-6`,
+    // },
 ];
 
 export default blogArticleData;

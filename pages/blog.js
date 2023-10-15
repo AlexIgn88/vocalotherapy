@@ -1,11 +1,10 @@
 import Head from 'next/head';
-import {
-    Box, Flex, Heading, Grid,
-} from '@chakra-ui/react';
+import { Box, Heading, Grid, Link } from '@chakra-ui/react';
 import { marginParameters, halfMarginParameters } from '../displayParameters/marginParameters';
-// import { h1HeadersFontSize, h2HeadersFontSize } from '../displayParameters/fontParameters';
+import { h1HeadersFontSize } from '../displayParameters/fontParameters';
 import BlogCardComponent from '../components/BlogCardComponent';
 import blogArticleData from '../data/blogArticleData';
+import NextLink from 'next/link';
 
 
 export default function BlogPage() {
@@ -26,6 +25,7 @@ export default function BlogPage() {
                     fontWeight={'normal'}
                     color={'brown'}
                     fontFamily={'cursive'}
+                    fontSize={h1HeadersFontSize}
                 >
                     Блог
                 </Heading>
@@ -43,16 +43,19 @@ export default function BlogPage() {
                     justifyItems={'center'}
                     gap={'5vw'}
                 >
-
                     {blogArticleData.map((item, i) =>
-                        <BlogCardComponent
+                        <Link
+                            as={NextLink}
                             key={blogArticleData[i].id}
-                            heading={blogArticleData[i].heading}
-                            img={blogArticleData[i].image}
-                            description={blogArticleData[i].description}
-                        />
+                            href={`/blog/${item.id}`}
+                        >
+                            <BlogCardComponent
+                                heading={blogArticleData[i].heading}
+                                img={blogArticleData[i].image}
+                                description={blogArticleData[i].description}
+                            />
+                        </Link>
                     )}
-
                 </Grid>
             </Box>
         </>
