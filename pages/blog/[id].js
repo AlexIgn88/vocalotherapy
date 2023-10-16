@@ -79,15 +79,17 @@ function ArticleBlocks({ orderValue, text, img }) {
             textIndent={'30px'}
             display={{ base: 'flex', sm: 'block', md: 'flex' }}
             flexDirection={{ base: 'column', sm: 'row' }}
-            gap={'3vw'}
+            gap={{ base: '3vw', sm: '0', md: '0' }}
             alignItems={{ base: 'center', md: 'flex-start' }}
         >
             <Box
                 order={'1'}
                 w={'50%'}
                 borderRadius={'10px'}
-                mr={{ base: '0', sm: '3vw', md: '0' }}
+                mb={{ base: '0', sm: '3vw', md: '0' }}
                 float={{ base: 'none', sm: 'left', md: 'none' }}
+                display={'flex'}
+                justifyContent={{ base: 'center', sm: 'space-around', md: 'space-around' }}
             >
                 <Image
                     src={img}
@@ -97,7 +99,7 @@ function ArticleBlocks({ orderValue, text, img }) {
                     priority={true}
                     style={{
                         borderRadius: '10px',
-                        width: '100%',
+                        width: '60%',
                         objectFit: 'cover',
                         objectPosition: 'center',
                     }}
