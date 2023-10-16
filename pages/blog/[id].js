@@ -1,9 +1,7 @@
 import Head from 'next/head';
-import {
-    Box, Flex, Heading, Text, useBreakpointValue,
-} from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, useBreakpointValue, } from '@chakra-ui/react';
 import { marginParameters, halfMarginParameters } from '../../displayParameters/marginParameters';
-import { h1HeadersFontSize, h2HeadersFontSize } from '../../displayParameters/fontParameters';
+import { h1HeadersFontSize } from '../../displayParameters/fontParameters';
 import blogArticleData from '../../data/blogArticleData';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
@@ -20,15 +18,10 @@ export default function BlogArticlePage() {
 
 
     let
-        id = blogArticleObject?.id,
         heading = blogArticleObject?.heading,
-        description = blogArticleObject?.description,
-        mainImage = blogArticleObject?.mainImage,
         textArr = blogArticleObject?.text,
         imagesArr = blogArticleObject?.images;
 
-
-    // console.log(blogArticleObject, text);
 
     return (
         <>
@@ -46,7 +39,6 @@ export default function BlogArticlePage() {
                 >
                     <Heading
                         as={'h1'}
-                        // mb={'30px'}
                         textAlign={'center'}
                         fontWeight={'normal'}
                         color={'brown'}
@@ -82,32 +74,20 @@ function ArticleBlocks({ orderValue, text, img }) {
 
     return (
         <Box
-            // mb={halfMarginParameters}
-
-            display={{ base: 'flex', sm: 'block', md: 'flex' }}
-            gap={'3vw'}
-
-            // h={'600px'}
             w={'100%'}
             textAlign={'justify'}
-            // flexDirection={{ base: 'column', md: 'row' }}
-            flexDirection={{ base: 'column', sm: 'row' }}
-            // justifyContent={'space-between'}
-            // alignItems={'center'}
-            alignItems={{ base: 'center', md: 'flex-start' }}
             textIndent={'30px'}
+            display={{ base: 'flex', sm: 'block', md: 'flex' }}
+            flexDirection={{ base: 'column', sm: 'row' }}
+            gap={'3vw'}
+            alignItems={{ base: 'center', md: 'flex-start' }}
         >
             <Box
                 order={'1'}
-                // h={'100%'}
                 w={'50%'}
-                // backgroundColor={'green'}
                 borderRadius={'10px'}
-                // flexShrink={'2'}
-
-                // float={'left'}
-                float={{ base: 'none', sm: 'left', md: 'none' }}
                 mr={{ base: '0', sm: '3vw', md: '0' }}
+                float={{ base: 'none', sm: 'left', md: 'none' }}
             >
                 <Image
                     src={img}
@@ -127,9 +107,7 @@ function ArticleBlocks({ orderValue, text, img }) {
                 order={orderValue ? '0' : '2'}
                 h={'100%'}
                 w={{ base: '100%', md: '50%' }}
-                // backgroundColor={'red'}
                 borderRadius={'10px'}
-            // flexGrow={'1'}
             >
                 <Text>
                     {text}
