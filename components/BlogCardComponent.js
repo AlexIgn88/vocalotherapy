@@ -25,8 +25,8 @@ export default function BlogCardComponent({ heading, img, description }) {
                 {isWide && <Image
                     src={img}
                     alt={heading}
-                    height={200}
-                    width={300}
+                    height={150}
+                    width={250}
                     priority={true}
                     style={{
                         borderRadius: '10px',

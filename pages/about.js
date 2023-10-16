@@ -49,8 +49,8 @@ export default function AboutPage() {
                             src={background}
                             alt='Vocalotherapy'
                             placeholder="blur"
-                            height={200}
-                            width={300}
+                            height={550}
+                            width={400}
                             priority={true}
                             style={{
                                 borderRadius: '10px',
