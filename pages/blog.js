@@ -51,7 +51,7 @@ export default function BlogPage() {
                         >
                             <BlogCardComponent
                                 heading={blogArticleData[i].heading}
-                                img={blogArticleData[i].image}
+                                img={blogArticleData[i].mainImage}
                                 description={blogArticleData[i].description}
                             />
                         </Link>
