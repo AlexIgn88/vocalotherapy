@@ -37,13 +37,13 @@ export default function AboutPage() {
                 </Heading>
                 <Box>
                     <Box
-                        w={{ base: '100%', md: '50%' }}
-                        h={{ base: '100%', md: '50%' }}
+                        w={{ base: '100%', md: '40%', xl: '30%' }}
+                        h={{ base: '100%', md: '40%', xl: '30%' }}
                         mt={'0px'}
                         mb={'30px'}
-                        ml={{ base: '0', md: '30px' }}
-                        mr={{ base: '30px', md: '0' }}
                         style={{ float: isWide ? 'right' : 'none', }}
+                        display={'flex'}
+                        justifyContent={{ base: 'center', md: 'flex-end' }}
                     >
                         <Image
                             src={background}
@@ -54,15 +54,17 @@ export default function AboutPage() {
                             priority={true}
                             style={{
                                 borderRadius: '10px',
-                                width: '100%',
-                                height: '100%',
+                                width: isWide ? '90%' : '70%',
+                                height: isWide ? '90%' : '70%',
                                 objectFit: 'cover',
                                 objectPosition: 'center',
                             }}
                         />
                     </Box>
-
-                    <List className='about-list'>
+                    <List
+                        className='about-list'
+                        textAlign={'justify'}
+                    >
                         <ListItem>
                             <ListIcon as={PiMusicNotesFill} color='brown' />
                             Член Федерации педагогов вокального искусства РФ,

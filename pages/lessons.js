@@ -33,18 +33,21 @@ export default function LessonsPage() {
                     fontFamily={'cursive'}
                     fontSize={h1HeadersFontSize}
                 >
-                    Vocalotherapy: откройте для себя Силу Голоса
+                    Уроки вокала
                 </Heading>
-                <Box>
-                    <Text textIndent={'30px'}>
+                <Box textAlign={'justify'}>
+                    <Text
+                        textIndent={'30px'}
+                        mb={halfMarginParameters}
+                    >
                         Вы мечтаете научиться петь, развить свой голос и улучшить свои вокальные способности?
-                        Тогда мой курс Vocalotherapy - это то, что вам нужно!
+                        Тогда вы по адресу!
                     </Text>
 
                     <Text>
-                        На моем курсе вы сможете раскрыть свой потенциал и освоить вокальное мастерство
-                        под руководством опытного педагога. Я предлагаю уникальную методику обучения,
-                        которая сочетает в себе традиционные и современные подходы к обучению вокалу.
+                        На занятиях вокалом вы сможете раскрыть свой потенциал и освоить вокальное мастерство под руководством опытного педагога.
+                        Я предлагаю уникальную методику обучения, которая сочетает в себе
+                        традиционные и современные подходы к обучению вокалу.
                     </Text>
                     <Box
                         w={{ base: '100%', lg: '30%' }}
@@ -85,9 +88,9 @@ export default function LessonsPage() {
                             fontFamily={'cursive'}
                             fontSize={h2HeadersFontSize}
                         >
-                            Преимущества моего курса Vocalotherapy
+                            Преимущества занятий вокалом со мной
                         </Heading>
-                        <List textAlign={'justify'}>
+                        <List>
                             <ListItem>
                                 <ListIcon as={PiMusicNotesFill} color='brown' />
                                 Индивидуальный подход: я учитываю ваши музыкальные предпочтения,

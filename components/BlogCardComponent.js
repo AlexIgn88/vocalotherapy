@@ -1,40 +1,52 @@
 import {
-    Heading, Stack, Text,
+    Heading, Stack, Text, useBreakpointValue,
     Card, CardBody,
 } from '@chakra-ui/react';
 import Image from 'next/image';
+import { textFontSize, h3HeadersFontSize } from '../displayParameters/fontParameters';
 
 
 
 export default function BlogCardComponent({ heading, img, description }) {
 
-    return <Card maxW='sm'>
-        <CardBody
-            p={'30px'}
-            display={'flex'}
-            flexDirection={'column'}
-            alignItems={'center'}
+    const isWide = useBreakpointValue({ base: false, md: true });
+
+    return (
+        <Card
+            maxW='sm'
+            height={'45vw'}
         >
-            <Image
-                src={img}
-                alt={heading}
-                height={200}
-                width={300}
-                priority={true}
-                style={{
-                    borderRadius: '10px',
-                    width: '100%',
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                }}
-            />
-            <Stack
-                mt='6'
-                spacing='3'
+            <CardBody
+                p={'30px'}
+                display={'flex'}
+                flexDirection={'column'}
+                alignItems={'center'}
             >
-                <Heading size='md' textAlign={'center'}>{heading}</Heading>
-                <Text>{description}</Text>
-            </Stack>
-        </CardBody>
-    </Card>
+                {isWide && <Image
+                    src={img}
+                    alt={heading}
+                    height={200}
+                    width={300}
+                    priority={true}
+                    style={{
+                        borderRadius: '10px',
+                        width: '100%',
+                        objectFit: 'cover',
+                        objectPosition: 'center',
+                    }}
+                />}
+                <Stack
+                    mt={{ base: '0', md: '6' }}
+                    spacing='3'
+                >
+                    <Heading
+                        fontSize={h3HeadersFontSize}
+                        textAlign={'center'}
+                    >{heading}</Heading>
+                    <Text
+                        fontSize={textFontSize}
+                    >{description}</Text>
+                </Stack>
+            </CardBody>
+        </Card>)
 }
