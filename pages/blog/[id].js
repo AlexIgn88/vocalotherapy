@@ -55,13 +55,13 @@ export default function BlogArticlePage() {
                                 key={i}
                                 orderValue={isWide}
                                 text={item}
-                                img={imagesArr[i] ?? '/img/blogArticleImg.jpeg'}
+                                img={imagesArr[i] ?? '/img/microphone.jpg'}
                             />
 
                             : <ArticleBlocks
                                 key={i}
                                 text={item}
-                                img={imagesArr[i] ?? '/img/blogArticleImg.jpeg'}
+                                img={imagesArr[i] ?? '/img/microphone.jpg'}
                             />
                     )}
                 </Flex>)}
@@ -84,7 +84,7 @@ function ArticleBlocks({ orderValue, text, img }) {
         >
             <Box
                 order={'1'}
-                w={'50%'}
+                w={{ base: '50%', md: '20%' }}
                 borderRadius={'10px'}
                 mb={{ base: '0', sm: '3vw', md: '0' }}
                 float={{ base: 'none', sm: 'left', md: 'none' }}
@@ -108,7 +108,7 @@ function ArticleBlocks({ orderValue, text, img }) {
             <Box
                 order={orderValue ? '0' : '2'}
                 h={'100%'}
-                w={{ base: '100%', md: '50%' }}
+                w={{ base: '100%', md: '80%' }}
                 borderRadius={'10px'}
             >
                 <Text>
