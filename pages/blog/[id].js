@@ -33,7 +33,6 @@ export default function BlogArticlePage() {
                     className='blog-page'
                     m={marginParameters}
                     mt={halfMarginParameters}
-
                     flexDirection={'column'}
                     gap={'5vw'}
                 >

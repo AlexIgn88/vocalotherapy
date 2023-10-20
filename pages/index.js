@@ -15,6 +15,8 @@ export default function HomePage() {
         className='home-page'
         m={marginParameters}
         color={'brown'}
+        // h={'100vh'}
+        h={{ base: 'auto', lg: '100vh' }}
       >
         <Flex
           flexDirection={{ base: 'column', lg: 'row' }}

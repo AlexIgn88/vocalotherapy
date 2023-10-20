@@ -23,6 +23,7 @@ export default function LessonsPage() {
                 className='lessons-page'
                 m={marginParameters}
                 mt={halfMarginParameters}
+                // h={'100vh'}
             >
                 <Heading
                     as={'h1'}

@@ -23,6 +23,7 @@ export default function ContactPage() {
                 mb={marginParametersInArray}
                 ml={newMarginParametersInArray}
                 mr={newMarginParametersInArray}
+                // h={'100vh'}
             >
                 <Heading
                     as={'h1'}
@@ -66,7 +67,10 @@ export default function ContactPage() {
                             >
                                 <a href={'mailto:' + 'bobeshko131192@mail.ru'}>bobeshko131192@mail.ru</a>
                             </Box>
-                            <Flex gap={'20px'} justifyContent={{ base: 'center', lg: 'normal' }}>
+                            <Flex
+                                gap={'20px'}
+                                justifyContent={{ base: 'center', lg: 'normal' }}
+                            >
                                 <SocialIcon url="https://instagram.com/vocalotherapy?igshid=MmU2YjMzNjRlOQ==" />
                                 <SocialIcon url="https://telegram.me/loveliverose" />
                             </Flex>
