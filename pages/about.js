@@ -103,7 +103,7 @@ export default function AboutPage() {
                         <ListItem>
                             <ListIcon as={PiMusicNotesFill} color='brown' />
                             Мастерство и успехи в образовательной и творческой деятельности были отмечены благодарственными
-                            письмами Воронежской Городской Думы.
+                            письмами Воронежской Городской  Думы.
                         </ListItem>
                     </List>
                 </Box>
